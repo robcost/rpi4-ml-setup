@@ -20,6 +20,8 @@ sudo systemctl enable jupyterhub
 sudo systemctl status jupyterhub.service
 sudo -H pip3 install jupyterlab
 sudo jupyter serverextension enable --py jupyterlab --system
+sudo -H pip3 install jupyterlab-git
+sudo jupyter lab build --dev-build=False --minimize=False
 sudo su -
 
 sudo systemctl status jupyterhub.service
